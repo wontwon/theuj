@@ -2,8 +2,8 @@ class Parser
 
 	def self.read_text(user_input = {})
 
-		user_input_in_array = user_input[:message].split("\n")
-		command = Array.new(1, user_input_in_array.pop)
+		user_input_in_array = user_input[:message].downcase.split("\n")
+		command = Array.new(1, user_input_in_array.shift)
 		# formatted_user_input = user_input_in_array
 		user_phone_number = user_input[:number]
 
