@@ -1,0 +1,24 @@
+class UjerDatabase
+  read
+  create
+  update
+end
+
+class Parser
+  self.read_text
+  show_usual_order
+  order_from_restaurant
+  change_usual_order
+  create_new_user
+end
+
+class Interface
+  prompt
+end
+
+class SMSSender
+  send_sms_to_restaurant
+  send_sms_to_user
+end
+
+Parser.read_text(user_input)
