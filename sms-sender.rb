@@ -16,7 +16,7 @@ class SMSsender
 	  client.account.messages.create(
 	    :from => from,
 	    :to => "+19145523727",
-	    :body => order_info
+	    :body => output_from_ujerdatabase
 	  )
 
 	end
@@ -31,7 +31,7 @@ class SMSsender
 	  client.account.messages.create(
 	    :from => from,
 	    :to => "+19145523727",
-	    :body => order_info
+	    :body => output_from_ujerdatabase
 	  ) 
 	end
 
