@@ -5,7 +5,7 @@ class UjerDatabase
 end
 
 class Parser
-  read_text
+  self.read_text
   show_usual_order
   order_from_restaurant
   change_usual_order
@@ -21,3 +21,4 @@ class SMSSender
   send_sms_to_user
 end
 
+Parser.read_text(user_input)
