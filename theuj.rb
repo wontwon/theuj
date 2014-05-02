@@ -73,27 +73,6 @@ DB1.execute(<<-SQL
 )
 
 
-# p DB1.execute(<<-SQL
-#   SELECT * FROM users
-#   JOIN thread ON (thread.creator_id = users.id);
-#   SQL
-#   )
-
-puts "print users table..."
-p DB1.execute("select * from users;") # note that sometimes quotes are enough
-puts ""
-
-puts "print orders table..."
-p DB1.execute("select * from orders;") 
-puts ""
-
-puts "print restaurants table..."
-p DB1.execute("select * from restaurants;") 
-puts ""
-
-puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-
-
 class UjerDatabase
   def self.list(user_phone_number)
     a = DB1.execute(<<-SQL
@@ -129,8 +108,4 @@ class UjerDatabase
 
     SMSsender.send_sms_to_restaurant("#{c}, #{d}")
   end
-
 end
-
-UjerDatabase.list('+13857382394')
-UjerDatabase.send_order('+13857382394')
