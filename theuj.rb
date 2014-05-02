@@ -109,6 +109,8 @@ class UjerDatabase
     WHERE item = '#{a}';
     SQL
     )
+
+    SMSsender.send_sms_to_user("#{a}, #{b}")
   end
 
   def self.send_order(user_phone_number)
@@ -124,7 +126,10 @@ class UjerDatabase
     WHERE phone_number = '#{user_phone_number}';
     SQL
     )
+
+    SMSsender.send_sms_to_restaurant("#{c}, #{d}")
   end
+
 end
 
 UjerDatabase.list('+13857382394')
