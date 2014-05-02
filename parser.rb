@@ -18,7 +18,7 @@ class Parser
 		when "hungry"
 			self.order_from_restaurant(user_phone_number)
 		else
-			puts "The U'J cannot perform that action."
+			SMSsender.send_sms_to_user("The U'J cannot perform that action.")
 		end
 
 	end
