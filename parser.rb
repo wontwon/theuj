@@ -5,7 +5,7 @@ class Parser
 		user_input_in_array = user_input[:message].split("\n")
 		command = Array.new(1, user_input_in_array.pop)
 		# formatted_user_input = user_input_in_array
-		user_phone_number = user_input[:phone_number]
+		user_phone_number = user_input[:number]
 
 
 		case command
@@ -15,7 +15,7 @@ class Parser
 			self.show_usual_order(user_phone_number)
 		# when "change"
 		# 	self.change_usual_order(user_input_in_array, user_phone_number)
-		when "feed"
+		when "hungry"
 			self.order_from_restaurant(user_phone_number)
 		else
 			puts "The U'J cannot perform that action."
